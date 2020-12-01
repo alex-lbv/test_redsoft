@@ -1,0 +1,62 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 280px;
+  border: 1px solid #E1E1E1;
+  overflow: hidden;
+
+  &--sold {
+    opacity: .5;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 24px 24px;
+  }
+
+  &__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 22px;
+    max-height: 54px;
+    max-width: 208px;
+    overflow: hidden;
+    font: 400 18px/27px Merriweather;
+  }
+
+  &__text {
+    padding-top: 12px;
+    font: 700 16px/24px Merriweather;
+    color: #343030;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price {
+    font: 700 16px/24px Merriweather;
+    color: #343030;
+
+    &--old {
+      font: 300 14px/21px Merriweather;
+      color: #A0A0A0;
+      text-decoration: line-through;
+    }
+  }
+
+  .btn {
+    width: 115px;
+  }
+}

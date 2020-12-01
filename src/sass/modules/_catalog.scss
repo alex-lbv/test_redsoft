@@ -1,0 +1,16 @@
+.catalog {
+  padding-top: 45px;
+  min-height: 768px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+      margin-bottom: 32px;
+      &:not(:nth-of-type(4n)) {
+        margin-right: 32px;
+      }
+    }
+  }
+}

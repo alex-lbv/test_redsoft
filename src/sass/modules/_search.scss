@@ -1,0 +1,19 @@
+.search {
+  padding: 13px 16px 14px;
+  min-width: 294px;
+  border: 1px solid #E1E1E1;
+  font: 400 14px/21px Merriweather;
+
+  &::placeholder {
+    color: #9F9F9F;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #B5B5B5;
+  }
+
+  &:active {
+    border-color: #B5B5B5;
+  }
+}

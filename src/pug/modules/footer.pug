@@ -1,0 +1,13 @@
+footer.footer
+  .container.container--flex
+    a.footer__logo(href='#')
+      img(src='img/logo_2.svg' alt='logo', width='48', height='48')
+    ul.nav
+      +nav_link('Каталог', 'nav__item')
+      +nav_link('Доставка', 'nav__item')
+      +nav_link('Оплата', 'nav__item')
+      +nav_link('Контакты', 'nav__item')
+      +nav_link('О галерее', 'nav__item')
+    .footer__contacts
+      a(class='footer__contacts-phone' href='tel:+74955555555') +7 (495) 555-55-55
+      span.footer__contacts-address г. Москва, ул. Расплетина, 24

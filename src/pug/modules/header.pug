@@ -1,0 +1,18 @@
+mixin nav_link(name, link_class)
+  li(class=link_class)
+    a(href='#')=name
+
+header.header
+  .container.container--flex
+    a.header__logo(href='#')
+      img(src='img/logo.svg' alt='logo', width='48', height='48')
+    nav
+      ul.nav
+        +nav_link('Каталог', 'nav__item')
+        +nav_link('Доставка', 'nav__item')
+        +nav_link('Оплата', 'nav__item')
+        +nav_link('Контакты', 'nav__item')
+        +nav_link('О галерее', 'nav__item')
+    .header__search
+      input(class='search' type='text' placeholder='Поиск по названию картины')
+      button(class='btn' type='button') Найти

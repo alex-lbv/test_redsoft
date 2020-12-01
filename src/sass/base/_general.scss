@@ -3,3 +3,39 @@
 ::after {
   box-sizing: border-box;
 }
+
+body {
+  background-color: #F6F3F3;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.container {
+  @media screen and (max-width: 1216px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  max-width: 1216px;
+  margin: 0 auto;
+
+  &--flex {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.title {
+  margin-bottom: 37px;
+  font: 700 24px/36px Merriweather;
+  color: #343030;
+}

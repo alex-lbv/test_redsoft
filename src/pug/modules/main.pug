@@ -1,0 +1,30 @@
+mixin card(title, image, price, price_old, status)
+  img(class='card__image' src=image width='280' height='160' alt='')
+  .card__footer
+    p.card__title=title
+    .card__container
+      .card__price-container
+        if price_old
+          span.card__price.card__price--old=price_old+ ' $'
+        if status !== 'sold'
+          span.card__price=price + ' $'
+        else
+          span.card__text Продана на аукционе
+      if status === 'active'
+        btn(class='btn btn--active' type='button') В корзине
+      else if status !== 'sold'
+        btn(class='btn' type='button') Купить
+
+
+main.catalog
+  .container
+    h1.title Картины эпохи Возрождения
+    ul.catalog__list
+      li.card
+        +card('«Рождение Венеры» Сандро Боттичелли', 'img/card_1.png', '1 000 000', '2 000 000')
+      li.card
+        +card('«Тайная вечеря»  Леонардо да Винчи', 'img/card_2.png', '3 000 000')
+      li.card.card__active
+        +card('«Сотворение Адама» Микеланджело', 'img/card_3.png', '5 000 000', '6 000 000','active')
+      li.card.card--sold
+        +card('«Урок анатомии»  Рембрандт', 'img/card_4.png', '', '', 'sold')

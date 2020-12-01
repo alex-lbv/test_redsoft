@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  padding-left: 48px;
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 49px;
+    }
+
+    a {
+      font: 400 14px/21px Merriweather;
+      color: #343030;
+    }
+  }
+}
